@@ -1,6 +1,8 @@
 # video-to-facebook-live-js
 Un script simple para transmitir un archivo local hacia un `facebook live`.
 
+* Warning README desactualizado * 
+
 ## Crear un video en facebook live 
 
 Dirigirse a la herramienta de creacion de videos en vivo https://www.facebook.com/live/create
