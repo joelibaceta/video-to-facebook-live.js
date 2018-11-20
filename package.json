@@ -1,0 +1,26 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "dotenv": "^6.1.0"
+  },
+  "name": "Video to Facebook Live",
+  "description": "A module to share a video to Facebook Live Streaming",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelibaceta/video-to-facebook-live-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelibaceta/video-to-facebook-live-js/issues"
+  },
+  "homepage": "https://github.com/joelibaceta/video-to-facebook-live-js#readme"
+}
