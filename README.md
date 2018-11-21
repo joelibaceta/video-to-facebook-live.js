@@ -16,7 +16,6 @@ En la pagina resultante podremos obtener una url de servidor y un identificador 
 
 Para este caso usaremos node y ffmpeg para llevar adelante esta transmisioón.
 
-
 Usaremos el modulo `child_process` para ejecutar ffmpeg en segundo plano.
 
 ```javascript
