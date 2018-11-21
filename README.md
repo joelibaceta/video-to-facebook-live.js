@@ -1,8 +1,31 @@
 # VideoToFacebookLive
-Un modulo simple para transmitir un video hacia `facebook live`.
+Un modulo simple para transmitir un video hacia `facebook live` usando nodejs.
 
 
-## Crear un video en facebook live de forma manual
+## Instalacioón
+
+Podemos instalar el modulo desde npm usando:
+
+```javascript
+npm i video-to-facebook-live
+```
+
+### Requerimientos:
+
+- ffmpeg instalado
+- nodejs
+
+## ¿Como funciona?
+
+Se abstrae una llamada a `ffmpeg` con los parametros minimos necesarios para poder realizar una transmision exitosa hacia un video en vivo de facebook.
+
+![diagram](images/diagram.svg)
+
+## ¿Como usarlo?
+
+En esta primera version es necesario crear manualmente una transmision hacia donde transmitir el video local.
+
+### Crear un video en facebook live de forma manual
 
 Dirigirse a la herramienta de creacion de videos en vivo https://www.facebook.com/live/create
 
@@ -12,41 +35,26 @@ En la pagina resultante podremos obtener una url de servidor y un identificador 
 
 ![facebook-stream-video](images/StreamVideoConfig.png)
 
-## Importar el modulo
-
-Para este caso usaremos node y ffmpeg para llevar adelante esta transmisioón.
-
-Usaremos el modulo `child_process` para ejecutar ffmpeg en segundo plano.
+### Modo de uso
 
 ```javascript
-const child_process = require('child_process');
+// Importar el modulo
+var videoToFacebookLive = require('video-to-facebook-live');
+
+// Parametros para la transmision
+var rtmp_uri = "rtmp://live-api-s.facebook.com:80/rtmp/";
+var stream_key = "10217959536199143?d....";
+var video_file = ".videos/big_buck_bunny.mp4";
+
+// Iniciar el proceso de transmision
+process = videoToFacebookLive.fromFile(video_file, rtmp_uri + stream_key)
+
+// Se puede consultar por el proceso encargado del encoding y transmision
+console.log("Video is being processing with pid: " + process.pid)
+
 ```
 
-Llamaremos a ffmpeg con una serie de parametros basados en la especificacion de facebook para los videos en vivo.
-
-```javascript
-child_process.spawn('ffmpeg', [
-    '-re',
-    '-i', 'Sintel.mp4',
-    '-f', 'flv',
-    '-profile:v', 'baseline',
-    '-pix_fmt', 'yuv420p',
-    '-acodec', 'libmp3lame',
-    '-ar', '44100',
-    '-b:a', '128k',
-    '-vcodec', 'libx264',
-    '-bufsize', '6000k',
-    '-vb', '400k', 
-    '-maxrate', '1500k',
-    '-preset', 'veryfast',
-    '-s', '426x240',
-    '-r', '30',
-    '-g', '30',
-    process.env.BASE_URL + process.env.STREAM_KEY
-]);
-```
-
-> En el ejemplo se usan variables de entorno para almacenar la url del servidor y la clave del stream
+## Caracteristicas de los videos aceptados por facebook para un video en vivo
 
 ### Formato de video:
 
@@ -76,10 +84,8 @@ child_process.spawn('ffmpeg', [
 - Velocidad de bits de codificación: CBR
 - Códec de video: H264
 
-Para probar que todo funcione correctamente ejcutemos el archivo `script.js` de forma local y podremos ver una vista previa en la pantalla de creacion de video vivo.
+## Proximos pasos
 
-```javascript
-node script.js
-```
-
-![facebook-stream-video](images/StreamPreview.png)
+- Permitir encolar videos a transmision
+- Permitir transmitir desde un elemento HTML canvas
+- Permitir configurar los parametros de la transmision
