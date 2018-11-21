@@ -4,7 +4,7 @@
   "dependencies": {
     "child_process": "^1.0.2"
   },
-  "name": "Video to Facebook Live",
+  "name": "video-to-facebook-live",
   "description": "A module to share a video to Facebook Live Streaming",
   "version": "1.0.0",
   "main": "index.js",
