@@ -6,11 +6,11 @@ Un modulo simple para transmitir un video hacia `facebook live`.
 
 Dirigirse a la herramienta de creacion de videos en vivo https://www.facebook.com/live/create
 
-![facebook-live-creator](images/FacebookLiveCreator.png)
+![facebook-live-creator](images/FbLiveCreator.png)
 
 En la pagina resultante podremos obtener una url de servidor y un identificador de nuestro nuevo video en vivo.
 
-![facebook-stream-video](images/StreamVideo.png)
+![facebook-stream-video](images/StreamVideoConfig.png)
 
 ## Importar el modulo
 
@@ -82,4 +82,4 @@ Para probar que todo funcione correctamente ejcutemos el archivo `script.js` de 
 node script.js
 ```
 
-![facebook-stream-video](images/SintelPreview.png)
+![facebook-stream-video](images/StreamPreview.png)
