@@ -6,7 +6,7 @@
   },
   "name": "video-to-facebook-live",
   "description": "A module to share a video to Facebook Live Streaming",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
