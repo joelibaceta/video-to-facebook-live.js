@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/video-to-facebook-live.svg)](https://badge.fury.io/js/video-to-facebook-live)
+
 # VideoToFacebookLive
 Un modulo simple para transmitir un video hacia `facebook live` usando nodejs.
 
