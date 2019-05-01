@@ -11,7 +11,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joelibaceta/video-to-facebook-live-js.git"
+    "url": "git+https://github.com/joelibaceta/video-to-facebook-live.js.git"
   },
   "author": "Joel Ibaceta <mail@joelibaceta.com>",
   "license": "ISC",
@@ -21,7 +21,7 @@
     "ffmpeg"
   ],
   "bugs": {
-    "url": "https://github.com/joelibaceta/video-to-facebook-live-js/issues"
+    "url": "https://github.com/joelibaceta/video-to-facebook-live.js/issues"
   },
-  "homepage": "https://github.com/joelibaceta/video-to-facebook-live-js#readme"
+  "homepage": "https://github.com/joelibaceta/video-to-facebook-live.js#readme"
 }
