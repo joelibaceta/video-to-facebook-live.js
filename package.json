@@ -8,6 +8,7 @@
   "description": "A module to share a video to Facebook Live Streaming",
   "version": "1.0.3",
   "main": "index.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {},
   "repository": {
     "type": "git",
